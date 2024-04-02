@@ -1,0 +1,143 @@
+<mvc:View
+    xmlns:form="sap.ui.layout.form"
+    controllerName="com.sap.myproject.controller.View2"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:uxap="sap.uxap"
+    xmlns:core="sap.ui.core"
+    xmlns:semantic="sap.f.semantic"
+    xmlns:u="sap.ui.unified"
+>
+    <Page
+        id="page"
+        title="{i18n>title}"
+    >
+        <content>
+            <uxap:ObjectPageLayout
+                id="ObjectPageLayout"
+                upperCaseAnchorBar="false"
+                showAnchorBar="true"
+                enableLazyLoading="true"
+            >
+                <uxap:sections>
+                    <uxap:ObjectPageSection
+                        id="_IDGenObjectPageSection1"
+                        showTitle="false"
+                    >
+                        <uxap:subSections>
+                            <uxap:ObjectPageSubSection
+                                id="_IDGenObjectPageSubSection1"
+                                title="General Info"
+                            >
+                                <uxap:blocks>
+                                    <Table
+                                            id="itemsTableUpdated"
+                                            inset="false"
+                                            items="{ProductData>/}"
+                                            mode="MultiSelect"
+                                            fixedLayout="false"
+                                        >
+                                            
+                                            <columns>
+                                                <Column id="itemColumn1Updated">
+                                                    <Text
+                                                        id="itemIdColumnHeaderUpdated"
+                                                        text="Demand ID"
+                                                    />
+                                                </Column>
+
+                                                <Column id="itemColumn2Updated">
+                                                    <Text
+                                                        id="materialNumColumnHeaderUpdated"
+                                                        text="Activity Description EN"
+                                                    />
+                                                </Column>
+
+                                                <Column id="itemColumn3Updated">
+                                                    <Text
+                                                        id="materialDescColumnHeaderUpdated"
+                                                        text="Contract Owner Name"
+                                                    />
+                                                </Column>
+
+                                                <Column id="itemColumn4Updated">
+                                                    <Text
+                                                        id="quantityColumnHeaderUpdated"
+                                                        text="User Focal Point Name"
+                                                    />
+                                                </Column>
+                                                <Column id="itemColumn5Updated">
+                                                    <Text
+                                                        id="versionColumnHeaderUpdated"
+                                                        text="Version"
+                                                    />
+                                                </Column>
+                                            </columns>
+
+                                            <items>
+                                                <ColumnListItem
+                                                    id="itemRowUpdated"
+                                                >
+                                                    <cells>
+                                                        <Text
+                                                            id="_IDGenInput4Updated"
+                                                            text="{ProductData>DemandID}"
+                                                        />
+
+                                                        <Text
+                                                            id="_IDGenInput3Updated"
+                                                            text="{ProductData>ActivityDescriptionEN}"
+                                                        />
+
+                                                        <Text
+                                                            id="_IDGenInput2Updated"
+                                                            text="{ProductData>ContractOwnerName}"
+                                                        />
+                                                        <Text
+                                                            id="_IDGenInput1Updated"
+                                                            text="{ProductData>UserFocalPointName}"
+                                                        />
+                                                        <Text
+                                                            id="_IDGenInput1Updated1"
+                                                            text="{ProductData>Version}"
+                                                        />
+                                                    </cells>
+                                                </ColumnListItem>
+                                            </items>
+                                        </Table>
+                                </uxap:blocks>
+                            </uxap:ObjectPageSubSection>
+                        </uxap:subSections>
+                    </uxap:ObjectPageSection>
+                </uxap:sections>
+            </uxap:ObjectPageLayout>
+            <!-- <List id="_IDGenList1" items="{/Products}">
+                <StandardListItem id="_IDGenStandardListItem1" title="{DemandID}" description="{ActivityDescriptionEN} {ContractOwnerName} {UserFocalPointName} {Version}" />
+            </List> -->
+             <!-- <VBox id="formContainer" items="{path: 'ProductData>/'}">
+                <items>
+                    <HBox>
+                        <Label text="{ProductData>key}" />
+                        <Input value="{ProductData>value}" enabled="false" />
+                    </HBox>
+                </items>
+            </VBox> -->
+        </content>
+        <!-- <footer>
+            <OverflowToolbar id="idOfToolbar">
+                <ToolbarSpacer id="_IDGenToolbarSpacer2" />
+                <Button
+                    id="_IDGenButton1"
+                    text="Submit"
+                    press="onSubmit"
+                />
+                <Button
+                    id="_IDGenButton2"
+                    text="Cancel"
+                    press="onCancel"
+                />
+            </OverflowToolbar>
+        </footer> -->
+    </Page>
+</mvc:View>

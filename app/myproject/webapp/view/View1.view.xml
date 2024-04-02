@@ -1,0 +1,82 @@
+<mvc:View
+    xmlns:form="sap.ui.layout.form"
+    controllerName="com.sap.myproject.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:uxap="sap.uxap"
+    xmlns:core="sap.ui.core"
+    xmlns:semantic="sap.f.semantic"
+    xmlns:u="sap.ui.unified"
+>
+    <Page
+        id="page"
+        title="{i18n>title}"
+    >
+        <content>
+        <!-- <Toolbar>
+                <ToolbarSpacer />
+                <Button
+                    text="Saved Versions"
+                    press="onSavedVersions"
+                />
+            </Toolbar> -->
+            <uxap:ObjectPageLayout
+                id="ObjectPageLayout"
+                upperCaseAnchorBar="false"
+                showAnchorBar="true"
+                enableLazyLoading="true"
+            >
+                <uxap:sections>
+                    <uxap:ObjectPageSection
+                        id="_IDGenObjectPageSection1"
+                        showTitle="false"
+                    >
+                        <uxap:subSections>
+                            <uxap:ObjectPageSubSection
+                                id="_IDGenObjectPageSubSection1"
+                                title="General Info"
+                            >
+                                <uxap:blocks>
+                                    <form:SimpleForm>
+                                        <form:content>
+                                            <Label text="Demand ID" />
+                                            <Input id="productID" />
+                                            <Label text="Activity Description EN" />
+                                            <Input id="productName" />
+                                            <Label text="Contract Owner Name" />
+                                            <Input id="quantity" />
+                                            <Label text="User Focal Point Name" />
+                                            <Input id="createdBy" />
+                                            <Label text="Version" />
+                                            <Input id="version" />
+                                        </form:content>
+                                    </form:SimpleForm>
+                                </uxap:blocks>
+                            </uxap:ObjectPageSubSection>
+                        </uxap:subSections>
+                    </uxap:ObjectPageSection>
+                </uxap:sections>
+            </uxap:ObjectPageLayout>
+        </content>
+        <footer>
+            <OverflowToolbar id="idOfToolbar">
+                <ToolbarSpacer id="_IDGenToolbarSpacer2" />
+                <Button
+                    text="Compare"
+                    press="onCompare"
+                />
+                <Button
+                    id="_IDGenButton1"
+                    text="Submit"
+                    press="onSubmit"
+                />
+                <Button
+                    id="_IDGenButton2"
+                    text="Cancel"
+                    press="onCancel"
+                />
+            </OverflowToolbar>
+        </footer>
+    </Page>
+</mvc:View>

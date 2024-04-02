@@ -1,0 +1,139 @@
+<mvc:View
+    xmlns:form="sap.ui.layout.form"
+    controllerName="com.sap.myproject.controller.View2"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:uxap="sap.uxap"
+    xmlns:core="sap.ui.core"
+    xmlns:semantic="sap.f.semantic"
+    xmlns:u="sap.ui.unified"
+>
+    <Page
+        id="page"
+        title="{i18n>title}"
+    >
+        <content>
+            <uxap:ObjectPageLayout
+                id="ObjectPageLayout"
+                upperCaseAnchorBar="false"
+                showAnchorBar="true"
+                enableLazyLoading="true"
+            >
+                <uxap:sections>
+                    <uxap:ObjectPageSection
+                        id="_IDGenObjectPageSection1"
+                        showTitle="false"
+                    >
+                        <uxap:subSections>
+                            <uxap:ObjectPageSubSection
+                                id="_IDGenObjectPageSubSection1"
+                                title="General Info"
+                            >
+                                <uxap:blocks>
+                                    <Table
+                                            id="itemsTableUpdated"
+                                            inset="false"
+                                            items="{/Products}"
+                                            mode="MultiSelect"
+                                            fixedLayout="false"
+                                        >
+                                            <headerToolbar>
+                                                <OverflowToolbar
+                                                    id="_IDGenOverflowToolbarUpdated"
+                                                >
+                                                    <ToolbarSpacer />
+
+                                                    <Button
+                                                        id="_IDGenButtonAdd"
+                                                        icon="sap-icon://add"
+                                                        press=""
+                                                    />
+                                                    <Button
+                                                        id="_IDGenButtonDelete"
+                                                        icon="sap-icon://delete"
+                                                        press="onDeleteItemPress"
+                                                    />
+                                                </OverflowToolbar>
+                                            </headerToolbar>
+                                            <columns>
+                                                <Column id="itemColumn1Updated">
+                                                    <Text
+                                                        id="itemIdColumnHeaderUpdated"
+                                                        text="Department"
+                                                    />
+                                                </Column>
+
+                                                <Column id="itemColumn2Updated">
+                                                    <Text
+                                                        id="materialNumColumnHeaderUpdated"
+                                                        text="Focal Point Name"
+                                                    />
+                                                </Column>
+
+                                                <Column id="itemColumn3Updated">
+                                                    <Text
+                                                        id="materialDescColumnHeaderUpdated"
+                                                        text="Email Address"
+                                                    />
+                                                </Column>
+
+                                                <Column id="itemColumn4Updated">
+                                                    <Text
+                                                        id="quantityColumnHeaderUpdated"
+                                                        text="FP Nomination Status"
+                                                    />
+                                                </Column>
+                                            </columns>
+
+                                            <items>
+                                                <ColumnListItem
+                                                    id="itemRowUpdated"
+                                                >
+                                                    <cells>
+                                                        <Text
+                                                            id="_IDGenInput4Updated"
+                                                            text="{ProductID}"
+                                                        />
+
+                                                        <Text
+                                                            id="_IDGenInput3Updated"
+                                                            text="{ProductName}"
+                                                        />
+
+                                                        <Text
+                                                            id="_IDGenInput2Updated"
+                                                            text="{Quantity}"
+                                                        />
+                                                        <Text
+                                                            id="_IDGenInput1Updated"
+                                                            text="{CreatedBy}"
+                                                        />
+                                                    </cells>
+                                                </ColumnListItem>
+                                            </items>
+                                        </Table>
+                                </uxap:blocks>
+                            </uxap:ObjectPageSubSection>
+                        </uxap:subSections>
+                    </uxap:ObjectPageSection>
+                </uxap:sections>
+            </uxap:ObjectPageLayout>
+        </content>
+        <footer>
+            <OverflowToolbar id="idOfToolbar">
+                <ToolbarSpacer id="_IDGenToolbarSpacer2" />
+                <Button
+                    id="_IDGenButton1"
+                    text="Submit"
+                    press="onSubmit"
+                />
+                <Button
+                    id="_IDGenButton2"
+                    text="Cancel"
+                    press="onCancel"
+                />
+            </OverflowToolbar>
+        </footer>
+    </Page>
+</mvc:View>
